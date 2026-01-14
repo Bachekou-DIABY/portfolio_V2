@@ -1,0 +1,14 @@
+{
+    "PROFILE": {
+        "TITLE": "Portfolio v2",
+        "SUBTITLE": "Passionate about developing scalable and high-performance ecosystems. Discover my accomplishments and technical expertise.",
+        "STATS": {
+            "INTERACTIONS": "Ankama Interactions",
+            "USERS": "Total Users"
+        }
+    },
+    "COMMON": {
+        "LANGUAGE": "English",
+        "SWITCH_TO": "Passer en Français"
+    }
+}

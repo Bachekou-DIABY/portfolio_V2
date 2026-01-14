@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeroSectionComponent } from './components/hero-section/hero-section';
+import { ProfileSectionComponent } from './components/profile-section/profile-section';
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroSectionComponent],
+  imports: [RouterOutlet, ProfileSectionComponent, LanguageSwitcherComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
