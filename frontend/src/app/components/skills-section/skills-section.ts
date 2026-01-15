@@ -37,15 +37,15 @@ export class SkillsSectionComponent {
   skillCategories = signal([
     {
       id: 'FRONTEND',
-      skills: ['Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design']
+      skills: ['HTML/CSS/JS', 'Angular', 'TypeScript', 'Tailwind CSS', 'Responsive Design']
     },
     {
       id: 'BACKEND',
-      skills: ['NestJS', 'Node.js', 'Symfony', 'PostgreSQL', 'Express']
+      skills: ['NestJS', 'Node.js', 'Symfony', 'MongoDB', 'PostgreSQL', 'Express']
     },
     {
       id: 'DEVOPS',
-      skills: ['Docker', 'AWS', 'Git / GitHub Actions', 'CI/CD']
+      skills: ['Docker', 'AWS', 'Git / Github', 'Gitlab', 'CI/CD']
     }
   ]);
 }

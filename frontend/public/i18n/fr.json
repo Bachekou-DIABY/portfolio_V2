@@ -50,15 +50,10 @@
     },
     "RECOMMENDATIONS": {
         "TITLE": "Recommandations",
-        "HUGO": {
-            "NAME": "Hugo Vergues",
-            "ROLE": "Collaborateur",
-            "TEXT": "En attente de témoignage..."
-        },
-        "GERMAIN": {
-            "NAME": "Germain Mantezolo",
-            "ROLE": "Collaborateur",
-            "TEXT": "En attente de témoignage..."
+        "FRANCK": {
+            "NAME": "Franck AIGLOZ",
+            "ROLE": "Manager Direct",
+            "TEXT": "Bachekou a réalisé son alternance dans notre société pendant un an et cette période a été très enrichissante pour lui mais également pour nous. Il a beaucoup progressé et atteint les objectifs qu'on lui avait fixés toujours avec beaucoup de positif et de bienveillance, je recommande fortement ce profil !"
         }
     },
     "SKILLS": {

@@ -60,7 +60,7 @@ import { LanguageService } from '../../services/language.service';
 
           <ng-template #noImage>
             <div class="w-full h-full flex items-center justify-center text-text-dim text-6xl font-black italic opacity-10 uppercase tracking-tighter">
-              {{ project()?.company }}
+              {{ ls.t()(project()?.company || '') }}
             </div>
           </ng-template>
         </div>
@@ -84,7 +84,7 @@ import { LanguageService } from '../../services/language.service';
                 </span>
               </div>
               <div class="space-y-2">
-                <h4 class="text-lg font-bold text-text-dim uppercase tracking-widest">{{ project()?.company }}</h4>
+                <h4 class="text-lg font-bold text-text-dim uppercase tracking-widest">{{ ls.t()(project()?.company || '') }}</h4>
                 <h2 class="text-4xl font-black tracking-tight leading-none">{{ ls.t()(project()?.title || '') }}</h2>
               </div>
             </div>
@@ -177,10 +177,15 @@ export class ProjectModalComponent {
       'AWS': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
       'AWS Lambda': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
       'Symfony': { bg: 'rgba(0, 0, 0, 0.1)', text: 'var(--text-main)', border: 'rgba(0, 0, 0, 0.2)' },
-      'PHP 8': { bg: 'rgba(119, 123, 179, 0.1)', text: '#777bb3', border: 'rgba(119, 123, 179, 0.2)' },
+      'PHP': { bg: 'rgba(119, 123, 179, 0.1)', text: '#777bb3', border: 'rgba(119, 123, 179, 0.2)' },
       'MySQL': { bg: 'rgba(0, 117, 143, 0.1)', text: '#00758f', border: 'rgba(0, 117, 143, 0.2)' },
+      'MongoDB': { bg: 'rgba(71, 162, 72, 0.1)', text: '#47a248', border: 'rgba(71, 162, 72, 0.2)' },
       'Node.js': { bg: 'rgba(51, 153, 51, 0.1)', text: '#339933', border: 'rgba(51, 153, 51, 0.2)' },
-      'GitHub Actions': { bg: 'rgba(32, 136, 255, 0.1)', text: '#2088ff', border: 'rgba(32, 136, 255, 0.2)' }
+      'HTML/CSS': { bg: 'rgba(227, 79, 38, 0.1)', text: '#e34f26', border: 'rgba(227, 79, 38, 0.2)' },
+      'Redis': { bg: 'rgba(220, 53, 34, 0.1)', text: '#dc3522', border: 'rgba(220, 53, 34, 0.2)' },
+      'Cloudflare': { bg: 'rgba(246, 133, 27, 0.1)', text: '#f6851b', border: 'rgba(246, 133, 27, 0.2)' },
+      'Flutter': { bg: 'rgba(2, 125, 247, 0.1)', text: '#027df7', border: 'rgba(2, 125, 247, 0.2)' },
+      'JavaScript': { bg: 'rgba(247, 223, 30, 0.1)', text: '#f7df1e', border: 'rgba(247, 223, 30, 0.2)' }
     };
 
     const config = colors[tech] || { bg: 'rgba(var(--text-dim-rgb), 0.05)', text: 'var(--text-dim)', border: 'var(--border)' };

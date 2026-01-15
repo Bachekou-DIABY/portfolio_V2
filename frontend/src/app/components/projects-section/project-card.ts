@@ -59,7 +59,7 @@ import { ModalService } from '../../services/modal.service';
 
         <ng-template #noImage>
           <div class="text-text-dim font-black text-4xl italic uppercase opacity-20">
-            {{ project.company }}
+            {{ ls.t()(project.company) }}
           </div>
         </ng-template>
         
@@ -80,7 +80,7 @@ import { ModalService } from '../../services/modal.service';
         <div class="flex-1 space-y-4">
           <div class="space-y-2">
             <p class="text-sm font-bold text-text-dim uppercase tracking-widest">
-              {{ project.company }}
+              {{ ls.t()(project.company) }}
             </p>
             <h3 [class.text-3xl]="project.featured"
                 [class.text-2xl]="!project.featured"

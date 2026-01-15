@@ -50,15 +50,10 @@
     },
     "RECOMMENDATIONS": {
         "TITLE": "Testimonials",
-        "HUGO": {
-            "NAME": "Hugo Vergues",
-            "ROLE": "Colleague",
-            "TEXT": "Pending testimonial..."
-        },
-        "GERMAIN": {
-            "NAME": "Germain Mantezolo",
-            "ROLE": "Colleague",
-            "TEXT": "Pending testimonial..."
+        "FRANCK": {
+            "NAME": "Franck AIGLOZ",
+            "ROLE": "Direct Manager",
+            "TEXT": "Bachekou completed his apprenticeship in our company for one year, and this period was very enriching for him as well as for us. He made great progress and achieved the objectives we set for him, always with a lot of positivity and kindness. I highly recommend this profile!"
         }
     },
     "SKILLS": {

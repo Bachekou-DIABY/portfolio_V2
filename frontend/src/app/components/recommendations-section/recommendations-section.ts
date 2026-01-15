@@ -40,7 +40,6 @@ import { LanguageService } from '../../services/language.service';
 export class RecommendationsSectionComponent {
   ls = inject(LanguageService);
   recommendations = signal([
-    { id: 'HUGO', initials: 'HV' },
-    { id: 'GERMAIN', initials: 'GM' }
+    { id: 'FRANCK', initials: 'FA' }
   ]);
 }
