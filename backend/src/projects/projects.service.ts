@@ -6,21 +6,21 @@ export class ProjectsService {
     private experiences: Experience[] = [
         {
             id: 'ankama',
-            title: 'Fullstack Developer',
+            title: 'PROJECTS.ANKAMA.TITLE',
             company: 'Ankama',
-            period: 'Feb 2025 - Aug 2025',
-            description: 'Développement d\'infrastructures et d\'une expérience interactive complète pour les jeux Ankama.',
+            period: 'PROJECTS.ANKAMA.PERIOD',
+            description: 'PROJECTS.ANKAMA.DESC',
             impact: [
                 { label: 'Interactions', value: '130M' },
                 { label: 'Users', value: '250k' },
             ],
             images: [
-                '/images/ankama/Feed the beast Overview 2025.png',
-                '/images/ankama/Feed the beast Concept 2025.png',
-                '/images/ankama/Feed the beast Mechanics & Interactions 2025.png',
-                '/images/ankama/Feed the beast Engagement Stats 2025.png',
-                '/images/ankama/Feed the beast Metrics 2025.png',
-                '/images/ankama/Feed the beast Community Activation 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Overview 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Concept 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Mechanics & Interactions 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Engagement Stats 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Metrics 2025.png',
+                'http://localhost:3000/images/ankama/Feed the beast Community Activation 2025.png',
             ],
         },
         {
