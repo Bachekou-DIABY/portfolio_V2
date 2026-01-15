@@ -18,12 +18,14 @@
         "ANKAMA": {
             "TITLE": "Développeur Fullstack",
             "PERIOD": "Fév 2025 - Août 2025",
-            "DESC": "Développement d'infrastructures et d'une expérience interactive complète pour les jeux Ankama."
+            "DESC": "Développement d'infrastructures et d'une expérience interactive complète pour les jeux Ankama.",
+            "LONG_DESC": "Chez Ankama, j'ai travaillé sur la refonte complète de l'infrastructure Twitch Extension pour DOFUS. Cela impliquait la création de micro-services scalables sous NestJS, capables de gérer des pics de trafic massifs lors d'événements communautaires. J'ai également développé une interface frontend dynamique en Angular permettant aux joueurs d'interagir directement avec le jeu depuis leurs streams favoris."
         },
         "LINKPART": {
             "TITLE": "Développeur Backend (Alternance)",
-            "PERIOD": "Sept 2023 - Août 2024",
-            "DESC": "Maintenance et évolution d'une plateforme SaaS complexe. Optimisation de la performance par micro-services et architectures événementielles (AWS Lambda)."
+            "PERIOD": "Sept 2023 - Sept 2024",
+            "DESC": "Maintenance et évolution d'une plateforme SaaS complexe. Optimisation de la performance par micro-services et architectures événementielles (AWS Lambda).",
+            "LONG_DESC": "Pendant mon alternance chez LinkPart, j'ai contribué au développement de Hub3e, une plateforme SaaS de gestion de la formation. J'ai notamment travaillé sur le passage d'une architecture monolithique Symfony vers des micro-services hybrides utilisant AWS Lambda. J'ai également mis en place des pipelines CI/CD complexes pour automatiser les tests et le déploiement sur plusieurs environnements."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
@@ -79,6 +81,12 @@
         "GITHUB": "GitHub",
         "CV": "Télécharger mon CV",
         "COPY_SUCCESS": "Copié !"
+    },
+    "MODAL": {
+        "ABOUT": "À propos du projet",
+        "TECH": "Technologies utilisées",
+        "IMPACT": "Impact & Chiffres",
+        "CLOSE": "Fermer les détails"
     },
     "COMMON": {
         "LANGUAGE": "Français",

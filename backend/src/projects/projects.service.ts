@@ -14,15 +14,17 @@ export class ProjectsService {
             featured: true,
             impact: [
                 { label: 'Interactions', value: '130M' },
-                { label: 'Users', value: '250k' },
+                { label: 'Users', value: '250k' }
             ],
+            technologies: ['Angular', 'NestJS', 'TypeScript', 'PostgreSQL', 'Docker', 'AWS'],
+            longDescription: 'PROJECTS.ANKAMA.LONG_DESC',
             images: [
-                'http://localhost:3000/images/ankama/Feed the beast Overview 2025.png',
-                'http://localhost:3000/images/ankama/Feed the beast Concept 2025.png',
-                'http://localhost:3000/images/ankama/Feed the beast Mechanics & Interactions 2025.png',
-                'http://localhost:3000/images/ankama/Feed the beast Engagement Stats 2025.png',
-                'http://localhost:3000/images/ankama/Feed the beast Metrics 2025.png',
-                'http://localhost:3000/images/ankama/Feed the beast Community Activation 2025.png',
+                '/images/ankama/Feed the beast Overview 2025.png',
+                '/images/ankama/Feed the beast Concept 2025.png',
+                '/images/ankama/Feed the beast Mechanics & Interactions 2025.png',
+                '/images/ankama/Feed the beast Engagement Stats 2025.png',
+                '/images/ankama/Feed the beast Metrics 2025.png',
+                '/images/ankama/Feed the beast Community Activation 2025.png',
             ],
         },
         {
@@ -33,7 +35,9 @@ export class ProjectsService {
             description: 'PROJECTS.LINKPART.DESC',
             type: 'pro',
             featured: true,
-            images: ['http://localhost:3000/images/linkpart/Hub3e login.png'],
+            technologies: ['Symfony', 'PHP 8', 'AWS Lambda', 'MySQL', 'Node.js', 'GitHub Actions'],
+            longDescription: 'PROJECTS.LINKPART.LONG_DESC',
+            images: ['/images/linkpart/Hub3e login.png'],
         },
         {
             id: 'urssaf',
@@ -42,7 +46,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.URSSAF.DESC',
             type: 'academic',
-            images: ['https://placehold.co/600x400/09090b/white?text=URSSAF'],
+            images: ['/images/urssaf/urssaf_mockup.png'],
         },
         {
             id: 'chefcook',
@@ -51,7 +55,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.CHEFCOOK.DESC',
             type: 'academic',
-            images: ['https://placehold.co/600x400/09090b/white?text=ChefCook'],
+            images: ['/images/chefcook/chefcook_mockup.png'],
         },
         {
             id: 'v1',
@@ -60,7 +64,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.V1.DESC',
             type: 'personal',
-            images: ['https://placehold.co/600x400/09090b/white?text=Portfolio+V1'],
+            images: ['/images/v1/v1_mockup.png'],
         },
         {
             id: 'energymix',
@@ -69,7 +73,7 @@ export class ProjectsService {
             period: '2020',
             description: 'PROJECTS.ENERGYMIX.DESC',
             type: 'academic',
-            images: ['https://placehold.co/600x400/09090b/white?text=EnergyMix'],
+            images: ['/images/energymix/energymix_mockup.png'],
         },
         {
             id: 'dicegame',
@@ -78,7 +82,7 @@ export class ProjectsService {
             period: '2020',
             description: 'PROJECTS.DICEGAME.DESC',
             type: 'academic',
-            images: ['https://placehold.co/600x400/09090b/white?text=DiceGame'],
+            images: ['/images/dicegame/dicegame_mockup.png'],
         }
     ];
 

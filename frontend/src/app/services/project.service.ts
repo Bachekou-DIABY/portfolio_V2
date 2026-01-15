@@ -12,6 +12,8 @@ export interface Experience {
         label: string;
         value: string;
     }[];
+    technologies?: string[];
+    longDescription?: string;
     images?: string[];
     type?: 'pro' | 'academic' | 'personal';
     featured?: boolean;
@@ -23,6 +25,7 @@ export interface Experience {
 export class ProjectService {
     private http = inject(HttpClient);
     private apiUrl = 'http://localhost:3000/projects';
+    private serverUrl = 'http://localhost:3000';
 
     getProjects(): Observable<Experience[]> {
         return this.http.get<Experience[]>(this.apiUrl);
@@ -30,5 +33,11 @@ export class ProjectService {
 
     getProjectById(id: string): Observable<Experience> {
         return this.http.get<Experience>(`${this.apiUrl}/${id}`);
+    }
+
+    getImageUrl(path: string): string {
+        if (!path) return '';
+        if (path.startsWith('http')) return path;
+        return `${this.serverUrl}${path}`;
     }
 }

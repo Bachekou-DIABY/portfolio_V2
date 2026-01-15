@@ -18,12 +18,14 @@
         "ANKAMA": {
             "TITLE": "Fullstack Developer",
             "PERIOD": "Feb 2025 - Aug 2025",
-            "DESC": "Development of infrastructure and a complete interactive experience for Ankama games."
+            "DESC": "Development of infrastructure and a complete interactive experience for Ankama games.",
+            "LONG_DESC": "At Ankama, I worked on the complete overhaul of the Twitch Extension infrastructure for DOFUS. This involved creating scalable micro-services with NestJS, capable of handling massive traffic spikes during community events. I also developed a dynamic Angular frontend interface allowing players to interact directly with the game from their favorite streams."
         },
         "LINKPART": {
             "TITLE": "Backend Developer (Apprenticeship)",
-            "PERIOD": "Sept 2023 - Aug 2024",
-            "DESC": "Maintenance and evolution of a complex SaaS platform. Performance optimization via micro-services and event-driven architectures (AWS Lambda)."
+            "PERIOD": "Sept 2023 - Sept 2024",
+            "DESC": "Maintenance and evolution of a complex SaaS platform. Performance optimization via micro-services and event-driven architectures (AWS Lambda).",
+            "LONG_DESC": "During my apprenticeship at LinkPart, I contributed to the development of Hub3e, a SaaS training management platform. I specifically worked on transitioning from a monolithic Symfony architecture to hybrid micro-services using AWS Lambda. I also implemented complex CI/CD pipelines to automate testing and deployment across multiple environments."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
@@ -78,7 +80,13 @@
         "LINKEDIN": "LinkedIn",
         "GITHUB": "GitHub",
         "CV": "Download CV",
-        "COPY_SUCCESS": "Copied!"
+        "COPY_SUCCESS": "Copied !"
+    },
+    "MODAL": {
+        "ABOUT": "About the project",
+        "TECH": "Technologies used",
+        "IMPACT": "Impact & Figures",
+        "CLOSE": "Close details"
     },
     "COMMON": {
         "LANGUAGE": "English",

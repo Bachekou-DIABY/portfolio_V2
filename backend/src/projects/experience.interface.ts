@@ -11,4 +11,6 @@ export interface Experience {
         label: string;
         value: string;
     }[];
+    technologies?: string[];
+    longDescription?: string;
 }

@@ -1,7 +1,9 @@
 import { Component, Input, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Experience } from '../../services/project.service';
+import { ProjectService, Experience } from '../../services/project.service';
 import { LanguageService } from '../../services/language.service';
+
+import { ModalService } from '../../services/modal.service';
 
 @Component({
     selector: 'app-project-card',
@@ -25,7 +27,7 @@ import { LanguageService } from '../../services/language.service';
             <div class="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]" 
                  [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'">
               <img *ngFor="let img of project.images" 
-                   [src]="img" 
+                   [src]="projectService.getImageUrl(img)" 
                    [alt]="ls.t()(project.title)" 
                    class="min-w-full h-full transition-transform duration-700"
                    [class.object-contain]="project.featured"
@@ -102,17 +104,15 @@ import { LanguageService } from '../../services/language.service';
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="pt-8 flex items-center gap-3 text-sm font-bold group-hover:gap-5 transition-all mt-auto group/btn">
-          <span class="text-text-main">Voir les détails</span>
-          <div class="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover/btn:bg-text-main group-hover/btn:text-bg transition-all">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
+          <!-- CTA -->
+          <button (click)="openModal()" 
+                  class="w-fit group/btn relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-text-main text-bg font-bold overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <span class="relative z-10 transition-colors">Voir les détails</span>
+            <svg class="relative z-10 w-5 h-5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+          </button>
         </div>
       </div>
-    </div>
   `,
     styles: [`
     :host {
@@ -125,6 +125,9 @@ export class ProjectCardComponent {
     @Input({ required: true }) project!: Experience;
 
     ls = inject(LanguageService);
+    modalService = inject(ModalService);
+    projectService = inject(ProjectService);
+
     currentIndex = signal(0);
 
     next(event: Event) {
@@ -139,5 +142,9 @@ export class ProjectCardComponent {
         if (this.project.images?.length) {
             this.currentIndex.set((this.currentIndex() - 1 + this.project.images.length) % this.project.images.length);
         }
+    }
+
+    openModal() {
+        this.modalService.open(this.project);
     }
 }
