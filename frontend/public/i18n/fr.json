@@ -14,10 +14,16 @@
     },
     "PROJECTS": {
         "TITLE": "Projets & Expériences",
+        "SUBTITLE": "Explorez l'ensemble de mes réalisations et expériences professionnelles.",
         "ANKAMA": {
             "TITLE": "Développeur Fullstack",
-            "PERIOD": "Février 2025 - Août 2025",
+            "PERIOD": "Fév 2025 - Août 2025",
             "DESC": "Développement d'infrastructures et d'une expérience interactive complète pour les jeux Ankama."
+        },
+        "LINKPART": {
+            "TITLE": "Développeur Backend (Alternance)",
+            "PERIOD": "Sept 2023 - Août 2024",
+            "DESC": "Maintenance et évolution d'une plateforme SaaS complexe. Optimisation de la performance par micro-services et architectures événementielles (AWS Lambda)."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
@@ -57,7 +63,22 @@
         "TITLE": "Compétences",
         "FRONTEND": "Frontend",
         "BACKEND": "Backend",
-        "DEVOPS": "DevOps & Cloud"
+        "DEVOPS": "DevOps & Cloud",
+        "TYPE": {
+            "PRO": "Expérience Pro",
+            "ACADEMIC": "Projet Académique",
+            "PERSONAL": "Projet Personnel"
+        }
+    },
+    "CONTACT": {
+        "TITLE": "Me contacter",
+        "SUBTITLE": "Disponible pour de nouvelles opportunités ou simplement pour discuter de technique.",
+        "PHONE": "Téléphone",
+        "EMAIL": "Email",
+        "LINKEDIN": "LinkedIn",
+        "GITHUB": "GitHub",
+        "CV": "Télécharger mon CV",
+        "COPY_SUCCESS": "Copié !"
     },
     "COMMON": {
         "LANGUAGE": "Français",

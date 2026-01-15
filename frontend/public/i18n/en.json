@@ -14,10 +14,16 @@
     },
     "PROJECTS": {
         "TITLE": "Projects & Experiences",
+        "SUBTITLE": "Explore all my achievements and professional experiences.",
         "ANKAMA": {
             "TITLE": "Fullstack Developer",
-            "PERIOD": "February 2025 - August 2025",
+            "PERIOD": "Feb 2025 - Aug 2025",
             "DESC": "Development of infrastructure and a complete interactive experience for Ankama games."
+        },
+        "LINKPART": {
+            "TITLE": "Backend Developer (Apprenticeship)",
+            "PERIOD": "Sept 2023 - Aug 2024",
+            "DESC": "Maintenance and evolution of a complex SaaS platform. Performance optimization via micro-services and event-driven architectures (AWS Lambda)."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
@@ -57,7 +63,22 @@
         "TITLE": "Expertise",
         "FRONTEND": "Frontend",
         "BACKEND": "Backend",
-        "DEVOPS": "DevOps & Cloud"
+        "DEVOPS": "DevOps & Cloud",
+        "TYPE": {
+            "PRO": "Professional Exp.",
+            "ACADEMIC": "Academic Project",
+            "PERSONAL": "Personal Project"
+        }
+    },
+    "CONTACT": {
+        "TITLE": "Get in touch",
+        "SUBTITLE": "Available for new opportunities or just to talk about tech.",
+        "PHONE": "Phone",
+        "EMAIL": "Email",
+        "LINKEDIN": "LinkedIn",
+        "GITHUB": "GitHub",
+        "CV": "Download CV",
+        "COPY_SUCCESS": "Copied!"
     },
     "COMMON": {
         "LANGUAGE": "English",

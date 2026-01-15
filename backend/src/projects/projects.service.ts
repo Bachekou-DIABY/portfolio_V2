@@ -10,6 +10,8 @@ export class ProjectsService {
             company: 'Ankama',
             period: 'PROJECTS.ANKAMA.PERIOD',
             description: 'PROJECTS.ANKAMA.DESC',
+            type: 'pro',
+            featured: true,
             impact: [
                 { label: 'Interactions', value: '130M' },
                 { label: 'Users', value: '250k' },
@@ -24,11 +26,22 @@ export class ProjectsService {
             ],
         },
         {
+            id: 'linkpart',
+            title: 'PROJECTS.LINKPART.TITLE',
+            company: 'LinkPart',
+            period: 'PROJECTS.LINKPART.PERIOD',
+            description: 'PROJECTS.LINKPART.DESC',
+            type: 'pro',
+            featured: true,
+            images: ['https://placehold.co/600x400/09090b/white?text=LinkPart+SaaS'],
+        },
+        {
             id: 'urssaf',
             title: 'PROJECTS.URSSAF.TITLE',
             company: 'Academic Project',
             period: '2024',
             description: 'PROJECTS.URSSAF.DESC',
+            type: 'academic',
             images: ['https://placehold.co/600x400/09090b/white?text=URSSAF'],
         },
         {
@@ -37,6 +50,7 @@ export class ProjectsService {
             company: 'Academic Project',
             period: '2024',
             description: 'PROJECTS.CHEFCOOK.DESC',
+            type: 'academic',
             images: ['https://placehold.co/600x400/09090b/white?text=ChefCook'],
         },
         {
@@ -45,6 +59,7 @@ export class ProjectsService {
             company: 'Personal Project',
             period: '2024',
             description: 'PROJECTS.V1.DESC',
+            type: 'personal',
             images: ['https://placehold.co/600x400/09090b/white?text=Portfolio+V1'],
         },
         {
@@ -53,6 +68,7 @@ export class ProjectsService {
             company: 'Academic Project',
             period: '2020',
             description: 'PROJECTS.ENERGYMIX.DESC',
+            type: 'academic',
             images: ['https://placehold.co/600x400/09090b/white?text=EnergyMix'],
         },
         {
@@ -61,6 +77,7 @@ export class ProjectsService {
             company: 'Academic Project',
             period: '2020',
             description: 'PROJECTS.DICEGAME.DESC',
+            type: 'academic',
             images: ['https://placehold.co/600x400/09090b/white?text=DiceGame'],
         }
     ];

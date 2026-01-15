@@ -13,6 +13,8 @@ export interface Experience {
         value: string;
     }[];
     images?: string[];
+    type?: 'pro' | 'academic' | 'personal';
+    featured?: boolean;
 }
 
 @Injectable({

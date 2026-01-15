@@ -5,6 +5,9 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
 import { FeaturedProjectComponent } from './components/featured-project/featured-project';
 import { RecommendationsSectionComponent } from './components/recommendations-section/recommendations-section';
 import { SkillsSectionComponent } from './components/skills-section/skills-section';
+import { ProjectsSectionComponent } from './components/projects-section/projects-section';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle';
+import { ContactSectionComponent } from './components/contact-section/contact-section';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +17,10 @@ import { SkillsSectionComponent } from './components/skills-section/skills-secti
     LanguageSwitcherComponent,
     FeaturedProjectComponent,
     RecommendationsSectionComponent,
-    SkillsSectionComponent
+    SkillsSectionComponent,
+    ThemeToggleComponent,
+    ProjectsSectionComponent,
+    ContactSectionComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
