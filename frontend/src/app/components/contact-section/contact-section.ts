@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
-    selector: 'app-contact-section',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'app-contact-section',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     <section class="py-24 bg-bg text-text-main px-8 border-t border-border transition-colors duration-300">
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="max-w-[1440px] mx-auto">
         <header class="mb-16">
           <h2 class="text-4xl font-black tracking-tight mb-4">
             {{ ls.t()('CONTACT.TITLE') }}
           </h2>
-          <p class="text-xl text-text-dim max-w-2xl mx-auto">
+          <p class="text-xl text-text-dim max-w-none">
             {{ ls.t()('CONTACT.SUBTITLE') }}
           </p>
         </header>
@@ -69,15 +69,17 @@ import { LanguageService } from '../../services/language.service';
         </div>
 
         <!-- CV Button -->
-        <a href="/CV.pdf" download="DIABY_Bachekou_CV.pdf"
-           class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-text-main text-bg font-bold text-lg hover:scale-105 transition-all shadow-xl">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          {{ ls.t()('CONTACT.CV') }}
-        </a>
+        <div class="flex justify-center">
+          <a href="/CV.pdf" download="DIABY_Bachekou_CV.pdf"
+             class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-text-main text-bg font-bold text-lg hover:scale-105 transition-all shadow-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {{ ls.t()('CONTACT.CV') }}
+          </a>
+        </div>
       </div>
     </section>
   `
 })
 export class ContactSectionComponent {
-    ls = inject(LanguageService);
+  ls = inject(LanguageService);
 }

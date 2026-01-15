@@ -33,7 +33,7 @@ export class ProjectsService {
             description: 'PROJECTS.LINKPART.DESC',
             type: 'pro',
             featured: true,
-            images: ['https://placehold.co/600x400/09090b/white?text=LinkPart+SaaS'],
+            images: ['http://localhost:3000/images/linkpart/Hub3e login.png'],
         },
         {
             id: 'urssaf',

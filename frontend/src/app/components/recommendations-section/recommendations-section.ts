@@ -6,7 +6,7 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   template: `
     <section class="py-24 bg-bg text-text-main px-8 border-t border-border transition-colors duration-300">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-[1440px] mx-auto">
         <h2 class="text-3xl font-bold mb-16 tracking-tight">{{ ls.t()('RECOMMENDATIONS.TITLE') }}</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
