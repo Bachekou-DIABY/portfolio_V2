@@ -1,11 +1,63 @@
 {
     "PROFILE": {
-        "TITLE": "Portfolio v2",
-        "SUBTITLE": "Passionné par le développement d'écosystèmes scalables et performants. Découvrez mes réalisations et mon expertise technique.",
+        "TITLE": "Bachekou DIABY",
+        "SUBTITLE": "Développeur Fullstack passionné par le développement d'écosystèmes scalables. Fort d'une expérience en alternance et d'un Master 2, je maîtrise le cycle de vie complet d'une application.",
         "STATS": {
             "INTERACTIONS": "Interactions Ankama",
             "USERS": "Utilisateurs totaux"
         }
+    },
+    "FEATURED": {
+        "LABEL": "PROJET PHARE",
+        "TITLE": "Impact Global chez Ankama",
+        "DESCRIPTION": "Développement d'infrastructures críticas supportant des millions d'utilisateurs. Focus sur la performance, la scalabilité et l'expérience développeur."
+    },
+    "PROJECTS": {
+        "TITLE": "Projets & Expériences",
+        "ANKAMA": {
+            "TITLE": "Développeur Fullstack",
+            "PERIOD": "Février 2025 - Août 2025",
+            "DESC": "Développement d'infrastructures et d'une expérience interactive complète pour les jeux Ankama."
+        },
+        "URSSAF": {
+            "TITLE": "Symfony URSSAF API",
+            "DESC": "Application interagissant avec l'API publique 'Mon entreprise' de l'URSSAF."
+        },
+        "CHEFCOOK": {
+            "TITLE": "Flutter ChefCook App",
+            "DESC": "Application mobile de recettes de cuisine faite maison."
+        },
+        "ENERGYMIX": {
+            "TITLE": "NodeJs EnergyMix",
+            "DESC": "Visualisation des données de consommation d'énergie."
+        },
+        "DICEGAME": {
+            "TITLE": "Javascript Dice Game",
+            "DESC": "Jeu de dés simple en Javascript pur."
+        },
+        "V1": {
+            "TITLE": "Portfolio V1",
+            "DESC": "Ma première vitrine technique sous Angular."
+        }
+    },
+    "RECOMMENDATIONS": {
+        "TITLE": "Recommandations",
+        "HUGO": {
+            "NAME": "Hugo Vergues",
+            "ROLE": "Collaborateur",
+            "TEXT": "En attente de témoignage..."
+        },
+        "GERMAIN": {
+            "NAME": "Germain Mantezolo",
+            "ROLE": "Collaborateur",
+            "TEXT": "En attente de témoignage..."
+        }
+    },
+    "SKILLS": {
+        "TITLE": "Compétences",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "DEVOPS": "DevOps & Cloud"
     },
     "COMMON": {
         "LANGUAGE": "Français",

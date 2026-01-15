@@ -2,10 +2,20 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProfileSectionComponent } from './components/profile-section/profile-section';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher';
+import { FeaturedProjectComponent } from './components/featured-project/featured-project';
+import { RecommendationsSectionComponent } from './components/recommendations-section/recommendations-section';
+import { SkillsSectionComponent } from './components/skills-section/skills-section';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileSectionComponent, LanguageSwitcherComponent],
+  imports: [
+    RouterOutlet,
+    ProfileSectionComponent,
+    LanguageSwitcherComponent,
+    FeaturedProjectComponent,
+    RecommendationsSectionComponent,
+    SkillsSectionComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

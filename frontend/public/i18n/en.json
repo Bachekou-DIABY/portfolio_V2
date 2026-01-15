@@ -1,11 +1,63 @@
 {
     "PROFILE": {
-        "TITLE": "Portfolio v2",
-        "SUBTITLE": "Passionate about developing scalable and high-performance ecosystems. Discover my accomplishments and technical expertise.",
+        "TITLE": "Bachekou DIABY",
+        "SUBTITLE": "Fullstack Developer passionate about building scalable ecosystems. With a Master's degree and strong industry experience, I master the full application lifecycle.",
         "STATS": {
             "INTERACTIONS": "Ankama Interactions",
             "USERS": "Total Users"
         }
+    },
+    "FEATURED": {
+        "LABEL": "FEATURED PROJECT",
+        "TITLE": "Global Impact at Ankama",
+        "DESCRIPTION": "Developing critical infrastructure supporting millions of users. Focused on performance, scalability, and developer experience."
+    },
+    "PROJECTS": {
+        "TITLE": "Projects & Experiences",
+        "ANKAMA": {
+            "TITLE": "Fullstack Developer",
+            "PERIOD": "February 2025 - August 2025",
+            "DESC": "Development of infrastructure and a complete interactive experience for Ankama games."
+        },
+        "URSSAF": {
+            "TITLE": "Symfony URSSAF API",
+            "DESC": "Application interacting with the public URSSAF 'Mon entreprise' API."
+        },
+        "CHEFCOOK": {
+            "TITLE": "Flutter ChefCook App",
+            "DESC": "Mobile app for homemade kitchen recipes."
+        },
+        "ENERGYMIX": {
+            "TITLE": "NodeJs EnergyMix",
+            "DESC": "Visualization of energy consumption data using Node.js."
+        },
+        "DICEGAME": {
+            "TITLE": "Javascript Dice Game",
+            "DESC": "Simple dice game built with pure Javascript."
+        },
+        "V1": {
+            "TITLE": "Portfolio V1",
+            "DESC": "My first technical showcase built with Angular."
+        }
+    },
+    "RECOMMENDATIONS": {
+        "TITLE": "Testimonials",
+        "HUGO": {
+            "NAME": "Hugo Vergues",
+            "ROLE": "Colleague",
+            "TEXT": "Pending testimonial..."
+        },
+        "GERMAIN": {
+            "NAME": "Germain Mantezolo",
+            "ROLE": "Colleague",
+            "TEXT": "Pending testimonial..."
+        }
+    },
+    "SKILLS": {
+        "TITLE": "Expertise",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "DEVOPS": "DevOps & Cloud"
     },
     "COMMON": {
         "LANGUAGE": "English",
