@@ -4,7 +4,7 @@ export interface Experience {
     company: string;
     period: string;
     description: string;
-    stats?: {
+    impact?: {
         label: string;
         value: string;
     }[];
