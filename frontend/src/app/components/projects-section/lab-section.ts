@@ -1,17 +1,30 @@
-import { Component, inject, signal, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, inject, signal, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectService, Experience } from '../../services/project.service';
 import { LanguageService } from '../../services/language.service';
 import { ModalService } from '../../services/modal.service';
 
 @Component({
-    selector: 'app-lab-section',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
-    <section class="py-24 bg-bg text-text-main px-8 border-t border-border/50 transition-colors duration-300 overflow-hidden">
+  selector: 'app-lab-section',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <section class="py-24 bg-bg text-text-main px-8 border-t border-border/50 transition-colors duration-300 overflow-hidden relative group/section">
+      <!-- Navigation Arrows (High Contrast & Compact) -->
+      <button (click)="scroll('left')" 
+              *ngIf="canScrollLeft()"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-8 lg:w-10 h-16 lg:h-24 bg-text-main text-bg border-y border-r border-border/20 rounded-r-2xl flex items-center justify-center transition-all active:scale-95 shadow-2xl hover:w-10 lg:hover:w-12 group/arrow">
+        <svg class="transition-transform group-hover/arrow:-translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      
+      <button (click)="scroll('right')" 
+              *ngIf="canScrollRight()"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-8 lg:w-10 h-16 lg:h-24 bg-text-main text-bg border-y border-l border-border/20 rounded-l-2xl flex items-center justify-center transition-all active:scale-95 shadow-2xl hover:w-10 lg:hover:w-12 group/arrow">
+        <svg class="transition-transform group-hover/arrow:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
       <div class="max-w-[1440px] mx-auto">
-        <header class="mb-12 flex justify-between items-end">
+        <header class="mb-12">
           <div class="space-y-3">
             <h2 class="text-3xl font-black tracking-tight">
               {{ ls.t()('LAB.TITLE') || 'Le Lab' }}
@@ -20,25 +33,15 @@ import { ModalService } from '../../services/modal.service';
               {{ ls.t()('LAB.SUBTITLE') || 'Une collection de projets académiques et personnels qui ont jalonné mon parcours.' }}
             </p>
           </div>
-          
-          <!-- Desktop Navigation Arrows -->
-          <div class="hidden lg:flex gap-3 mb-2">
-            <button (click)="scroll('left')" 
-                    class="w-12 h-12 rounded-full border border-border flex items-center justify-center text-text-main hover:bg-text-main hover:text-bg transition-all active:scale-95 shadow-lg group">
-              <svg class="transition-transform group-active:-translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <button (click)="scroll('right')" 
-                    class="w-12 h-12 rounded-full border border-border flex items-center justify-center text-text-main hover:bg-text-main hover:text-bg transition-all active:scale-95 shadow-lg group">
-              <svg class="transition-transform group-active:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-          </div>
         </header>
 
         <!-- Horizontal Scroll Container -->
         <div class="relative">
-          <div #scrollContainer class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+          <div #scrollContainer 
+               (scroll)="updateScrollState()"
+               class="flex gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide -mx-8 px-8 lg:mx-0 lg:px-0 scroll-smooth">
             <div *ngFor="let project of projects()" 
-                 class="min-w-[320px] sm:min-w-[420px] snap-start">
+                 class="min-w-[85vw] sm:min-w-[420px] lg:min-w-[420px] snap-center lg:snap-start first:pl-0 last:pr-8 lg:last:pr-0">
               <div class="group/card bg-bg border border-border/60 rounded-3xl h-full flex flex-col hover:border-text-main/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:-translate-y-2 relative overflow-hidden">
                 
                 <!-- Project Image Thumbnail -->
@@ -49,7 +52,7 @@ import { ModalService } from '../../services/modal.service';
                          class="w-full h-full object-cover opacity-60 group-hover/card:opacity-100 group-hover/card:scale-110 transition-all duration-700">
                   </ng-container>
                   <ng-template #noImg>
-                    <div class="w-full h-full flex items-center justify-center opacity-20 italic font-black uppercase tracking-tighter text-2xl">
+                    <div class="w-full h-full flex items-center justify-center opacity-20 italic font-black uppercase tracking-tighter text-2xl text-center px-4">
                       {{ ls.t()(project.company) }}
                     </div>
                   </ng-template>
@@ -94,11 +97,20 @@ import { ModalService } from '../../services/modal.service';
               </div>
             </div>
           </div>
+
+          <!-- Progress Bar Indicator -->
+          <div class="mt-4 flex justify-start lg:justify-center px-4 lg:px-0">
+            <div class="w-full lg:w-1/3 h-[2px] bg-border/30 rounded-full overflow-hidden">
+              <div class="h-full bg-text-main transition-all duration-300 ease-out rounded-full"
+                   [style.width.%]="scrollProgress()"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   `,
-    styles: [`
+  styles: [`
     .scrollbar-hide::-webkit-scrollbar {
       display: none;
     }
@@ -108,57 +120,78 @@ import { ModalService } from '../../services/modal.service';
     }
   `]
 })
-export class LabSectionComponent implements OnInit {
-    @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+export class LabSectionComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 
-    projectService = inject(ProjectService);
-    ls = inject(LanguageService);
-    modalService = inject(ModalService);
+  projectService = inject(ProjectService);
+  ls = inject(LanguageService);
+  modalService = inject(ModalService);
 
-    projects = signal<Experience[]>([]);
+  projects = signal<Experience[]>([]);
+  scrollProgress = signal<number>(0);
+  canScrollLeft = signal<boolean>(false);
+  canScrollRight = signal<boolean>(true);
 
-    ngOnInit() {
-        this.projectService.getProjects().subscribe(projects => {
-            this.projects.set(projects.filter(p => !p.featured));
-        });
-    }
+  ngOnInit() {
+    this.projectService.getProjects().subscribe(projects => {
+      this.projects.set(projects.filter(p => !p.featured));
+      // Small timeout to let the view render before updating state
+      setTimeout(() => this.updateScrollState(), 100);
+    });
+  }
 
-    scroll(direction: 'left' | 'right') {
-        const container = this.scrollContainer.nativeElement;
-        const scrollAmount = direction === 'left' ? -420 : 420;
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+  ngAfterViewInit() {
+    this.updateScrollState();
+  }
 
-    openProject(project: Experience) {
-        this.modalService.open(project);
-    }
+  updateScrollState() {
+    if (!this.scrollContainer) return;
 
-    getTechStyles(tech: string) {
-        const colors: Record<string, { bg: string, text: string, border: string }> = {
-            'Angular': { bg: 'rgba(221, 0, 49, 0.1)', text: '#dd0031', border: 'rgba(221, 0, 49, 0.2)' },
-            'NestJS': { bg: 'rgba(224, 35, 78, 0.1)', text: '#e0234e', border: 'rgba(224, 35, 78, 0.2)' },
-            'TypeScript': { bg: 'rgba(49, 120, 198, 0.1)', text: '#3178c6', border: 'rgba(49, 120, 198, 0.2)' },
-            'PostgreSQL': { bg: 'rgba(51, 103, 145, 0.1)', text: '#336791', border: 'rgba(51, 103, 145, 0.2)' },
-            'Docker': { bg: 'rgba(36, 150, 237, 0.1)', text: '#2496ed', border: 'rgba(36, 150, 237, 0.2)' },
-            'AWS': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
-            'AWS Lambda': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
-            'Symfony': { bg: 'rgba(0, 0, 0, 0.1)', text: 'var(--text-main)', border: 'rgba(0, 0, 0, 0.2)' },
-            'PHP': { bg: 'rgba(119, 123, 179, 0.1)', text: '#777bb3', border: 'rgba(119, 123, 179, 0.2)' },
-            'MySQL': { bg: 'rgba(0, 117, 143, 0.1)', text: '#00758f', border: 'rgba(0, 117, 143, 0.2)' },
-            'MongoDB': { bg: 'rgba(71, 162, 72, 0.1)', text: '#47a248', border: 'rgba(71, 162, 72, 0.2)' },
-            'Node.js': { bg: 'rgba(51, 153, 51, 0.1)', text: '#339933', border: 'rgba(51, 153, 51, 0.2)' },
-            'HTML/CSS': { bg: 'rgba(227, 79, 38, 0.1)', text: '#e34f26', border: 'rgba(227, 79, 38, 0.2)' },
-            'Redis': { bg: 'rgba(220, 53, 34, 0.1)', text: '#dc3522', border: 'rgba(220, 53, 34, 0.2)' },
-            'Cloudflare': { bg: 'rgba(246, 133, 27, 0.1)', text: '#f6851b', border: 'rgba(246, 133, 27, 0.2)' },
-            'Flutter': { bg: 'rgba(2, 125, 247, 0.1)', text: '#027df7', border: 'rgba(2, 125, 247, 0.2)' },
-            'JavaScript': { bg: 'rgba(247, 223, 30, 0.1)', text: '#b59a00', border: 'rgba(247, 223, 30, 0.2)' }
-        };
+    const container = this.scrollContainer.nativeElement;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
 
-        const config = colors[tech] || { bg: 'rgba(var(--text-dim-rgb), 0.05)', text: 'var(--text-dim)', border: 'var(--border)' };
-        return {
-            'background-color': config.bg,
-            'color': config.text,
-            'border-color': config.border
-        };
-    }
+    this.scrollProgress.set(maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0);
+    this.canScrollLeft.set(scrollLeft > 10);
+    this.canScrollRight.set(scrollLeft < maxScroll - 10);
+  }
+
+  scroll(direction: 'left' | 'right') {
+    const container = this.scrollContainer.nativeElement;
+    const scrollAmount = direction === 'left' ? -container.clientWidth * 0.8 : container.clientWidth * 0.8;
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+
+  openProject(project: Experience) {
+    this.modalService.open(project);
+  }
+
+  getTechStyles(tech: string) {
+    const colors: Record<string, { bg: string, text: string, border: string }> = {
+      'Angular': { bg: 'rgba(221, 0, 49, 0.1)', text: '#dd0031', border: 'rgba(221, 0, 49, 0.2)' },
+      'NestJS': { bg: 'rgba(224, 35, 78, 0.1)', text: '#e0234e', border: 'rgba(224, 35, 78, 0.2)' },
+      'TypeScript': { bg: 'rgba(49, 120, 198, 0.1)', text: '#3178c6', border: 'rgba(49, 120, 198, 0.2)' },
+      'PostgreSQL': { bg: 'rgba(51, 103, 145, 0.1)', text: '#336791', border: 'rgba(51, 103, 145, 0.2)' },
+      'Docker': { bg: 'rgba(36, 150, 237, 0.1)', text: '#2496ed', border: 'rgba(36, 150, 237, 0.2)' },
+      'AWS': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
+      'AWS Lambda': { bg: 'rgba(255, 153, 0, 0.1)', text: '#ff9900', border: 'rgba(255, 153, 0, 0.2)' },
+      'Symfony': { bg: 'rgba(0, 0, 0, 0.1)', text: 'var(--text-main)', border: 'rgba(0, 0, 0, 0.2)' },
+      'PHP': { bg: 'rgba(119, 123, 179, 0.1)', text: '#777bb3', border: 'rgba(119, 123, 179, 0.2)' },
+      'MySQL': { bg: 'rgba(0, 117, 143, 0.1)', text: '#00758f', border: 'rgba(0, 117, 143, 0.2)' },
+      'MongoDB': { bg: 'rgba(71, 162, 72, 0.1)', text: '#47a248', border: 'rgba(71, 162, 72, 0.2)' },
+      'Node.js': { bg: 'rgba(51, 153, 51, 0.1)', text: '#339933', border: 'rgba(51, 153, 51, 0.2)' },
+      'HTML/CSS': { bg: 'rgba(227, 79, 38, 0.1)', text: '#e34f26', border: 'rgba(227, 79, 38, 0.2)' },
+      'Redis': { bg: 'rgba(220, 53, 34, 0.1)', text: '#dc3522', border: 'rgba(220, 53, 34, 0.2)' },
+      'Cloudflare': { bg: 'rgba(246, 133, 27, 0.1)', text: '#f6851b', border: 'rgba(246, 133, 27, 0.2)' },
+      'Flutter': { bg: 'rgba(2, 125, 247, 0.1)', text: '#027df7', border: 'rgba(2, 125, 247, 0.2)' },
+      'JavaScript': { bg: 'rgba(247, 223, 30, 0.1)', text: '#b59a00', border: 'rgba(247, 223, 30, 0.2)' }
+    };
+
+    const config = colors[tech] || { bg: 'rgba(var(--text-dim-rgb), 0.05)', text: 'var(--text-dim)', border: 'var(--border)' };
+    return {
+      'background-color': config.bg,
+      'color': config.text,
+      'border-color': config.border
+    };
+  }
 }
