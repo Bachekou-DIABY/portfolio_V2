@@ -79,7 +79,7 @@ import { LanguageService } from '../../services/language.service';
                 <span class="w-fit px-3 py-1 rounded-full bg-text-main text-bg text-[9px] sm:text-[10px] font-bold tracking-widest uppercase flex-shrink-0">
                   {{ ls.t()('SKILLS.TYPE.' + (project()?.type?.toUpperCase() || '')) }}
                 </span>
-                <span class="text-[11px] sm:text-sm font-bold text-text-dim uppercase tracking-widest leading-none">
+                <span class="text-[10px] sm:text-sm font-bold text-text-dim uppercase tracking-widest leading-none">
                   {{ ls.t()(project()?.period || '') }}
                 </span>
               </div>
