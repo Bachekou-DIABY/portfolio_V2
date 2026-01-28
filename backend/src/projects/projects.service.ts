@@ -38,7 +38,9 @@ export class ProjectsService {
             technologies: ['Angular', 'TypeScript', 'Symfony', 'PHP', 'Node.js', 'AWS Lambda', 'MySQL'],
             longDescription: 'PROJECTS.LINKPART.LONG_DESC',
             images: ['/images/linkpart/Hub3e login.png'],
-        },
+        }
+        /*
+        ,
         {
             id: 'urssaf',
             title: 'PROJECTS.URSSAF.TITLE',
@@ -97,6 +99,7 @@ export class ProjectsService {
             technologies: ['JavaScript'],
             images: ['/images/diceGame/jsGameProject.png'],
         }
+        */
     ];
 
     findAll(): Experience[] {

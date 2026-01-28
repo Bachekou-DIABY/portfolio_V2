@@ -12,7 +12,7 @@ import { LanguageService } from '../../services/language.service';
           <h1 class="text-7xl lg:text-8xl font-black text-center tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-text-main to-text-dim animate-reveal opacity-0">
             {{ ls.t()('PROFILE.TITLE') }}
           </h1>
-          <p class="text-2xl text-text-dim max-w-6xl leading-relaxed lg:text-left lg:mx-0 text-center mx-auto animate-reveal opacity-0 animation-delay-200">
+          <p class="text-xl lg:text-2xl text-text-dim max-w-6xl leading-relaxed text-center mx-auto lg:text-left lg:mx-0 animate-reveal opacity-0 animation-delay-200">
             {{ ls.t()('PROFILE.SUBTITLE') }}
           </p>
         </header>
