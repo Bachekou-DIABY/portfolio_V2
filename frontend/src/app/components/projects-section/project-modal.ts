@@ -92,8 +92,8 @@ import { LanguageService } from '../../services/language.service';
             <!-- Description -->
             <div class="space-y-6">
               <h3 class="text-xs font-bold text-text-dim uppercase tracking-widest">{{ ls.t()('MODAL.ABOUT') }}</h3>
-              <p class="text-lg text-text-main leading-relaxed">
-                {{ project()?.longDescription ? ls.t()(project()?.longDescription!) : ls.t()(project()?.description || '') }}
+              <p class="text-lg text-text-main leading-relaxed whitespace-pre-wrap" 
+                 [innerHTML]="project()?.longDescription ? ls.t()(project()?.longDescription!) : ls.t()(project()?.description || '')">
               </p>
             </div>
 

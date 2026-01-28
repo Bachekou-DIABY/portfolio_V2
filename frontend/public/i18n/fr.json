@@ -19,13 +19,13 @@
             "TITLE": "Mission Backend - Twitch / Ankama",
             "PERIOD": "Fév 2025 - Août 2025",
             "DESC": "Développement de l'extension Twitch 'Feed the Beast' gérant des pics de trafic massifs.",
-            "LONG_DESC": "Développement d'une architecture temps réel avec Node.js, Express.js et MongoDB pour gérer des overlays interactifs. Mise en place d’une scalabilité via Redis et PM2 Cluster Mode pour supporter 250 000 spectateurs uniques et plus de 130 millions d’interactions sur 3 semaines."
+            "LONG_DESC": "<b>CONTEXTE</b> : Créer une expérience interactive massive pour les spectateurs Twitch avec l'extension <b>Feed the Beast</b> lors du lancement d'une mise à jour majeure du jeu <b>DOFUS</b>.\n\n<b>SOLUTION</b> : Développement d'une architecture micro-services ultra-performante basée sur <b>Node.js</b>, Redis, MongoDB et Cloudflare, orchestrée via PM2 Cluster Mode.\n\n<b>RÉSULTAT</b> : Capacité de gestion record avec plus de 130m d'interactions et 250 000 spectateurs simultanés sans aucune interruption de service."
         },
         "LINKPART": {
             "TITLE": "Développeur Fullstack (Alternance)",
             "PERIOD": "Sept 2023 - Sept 2024",
             "DESC": "Évolution d'une plateforme SaaS complexe (Hub3e). Transition vers des micro-services hybrides et architectures événementielles.",
-            "LONG_DESC": "Pendant mon alternance chez LinkPart, j'ai contribué à l'évolution de Hub3e, leader français de la plateforme d’alternance. J'ai conçu des architectures événementielles avec AWS Lambda et Node.js pour automatiser les flux de données. J'ai également piloté la migration technique des clients vers une nouvelle version majeure tout en optimisant la gestion des données en masse."
+            "LONG_DESC": "<b>CONTEXTE</b> : Moderniser et automatiser les flux de données de la plateforme SaaS Hub3e, leader français de la gestion d'alternance.\n\n<b>SOLUTION</b> : Conception d'architectures événementielles (Event-Driven) utilisant AWS Lambda et Node.js pour débloquer les goulots d'étranglement du monolithe Symfony.\n\n<b>RÉSULTAT</b> : Automatisation complète des synchronisations de données et pilotage réussi de la migration technique des clients vers une nouvelle version majeure."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",

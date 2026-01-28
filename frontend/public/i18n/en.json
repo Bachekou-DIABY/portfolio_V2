@@ -19,13 +19,13 @@
             "TITLE": "Backend Mission - Twitch / Ankama",
             "PERIOD": "Feb 2025 - Aug 2025",
             "DESC": "Development of the 'Feed the Beast' Twitch extension managing massive traffic spikes.",
-            "LONG_DESC": "Developed a real-time architecture using Node.js, Express.js, and MongoDB to manage interactive overlays. Implemented scalability via Redis and PM2 Cluster Mode to support 250,000 unique viewers and over 130 million interactions in 3 weeks."
+            "LONG_DESC": "<b>CONTEXT</b>: Create a massive interactive experience for Twitch viewers with the <b>Feed the Beast</b> extension during the launch of a major update for the game <b>DOFUS</b>.\n\n<b>SOLUTION</b>: Development of a high-performance micro-services architecture based on <b>Node.js</b>, Redis, MongoDB, and Cloudflare, orchestrated via PM2 Cluster Mode.\n\n<b>RESULT</b>: Record-breaking management capacity with over 130m interactions and 250,000 simultaneous viewers without any service interruption."
         },
         "LINKPART": {
             "TITLE": "Fullstack Developer (Apprenticeship)",
             "PERIOD": "Sept 2023 - Sept 2024",
             "DESC": "Evolution of a complex SaaS platform (Hub3e). Transition to hybrid micro-services and event-driven architectures.",
-            "LONG_DESC": "During my apprenticeship at LinkPart, I contributed to the evolution of Hub3e, the leading French platform for apprenticeship management. I designed event-driven architectures with AWS Lambda and Node.js to automate data flows. I also led the technical migration of clients to a new major version while optimizing mass data management."
+            "LONG_DESC": "<b>CONTEXT</b>: Modernize and automate data flows for the Hub3e SaaS platform, the French leader in apprenticeship management.\n\n<b>SOLUTION</b>: Design of event-driven architectures using AWS Lambda and Node.js to unlock bottlenecks in the Symfony monolith.\n\n<b>RESULT</b>: Complete automation of data synchronizations and successful technical migration of clients to a new major version."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
