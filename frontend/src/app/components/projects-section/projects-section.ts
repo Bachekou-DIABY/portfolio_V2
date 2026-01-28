@@ -15,7 +15,7 @@ import { ProjectCardComponent } from './project-card';
           <h2 class="text-4xl font-black tracking-tight mb-4">
             {{ ls.t()('PROJECTS.TITLE') }}
           </h2>
-          <p class="text-xl text-text-dim max-w-2xl">
+          <p class="text-xl text-text-dim">
             {{ ls.t()('PROJECTS.SUBTITLE') }}
           </p>
         </header>
