@@ -29,3 +29,6 @@ Thumbs.db
 # --- DOCKER ---
 .dockerignore
 docker-compose.override.yml
+
+# --- DOCUMENTATION PERSO ---
+CHEATSHEET.md
