@@ -12,7 +12,8 @@ RUN npm run build
 # Production image
 FROM nginx:alpine
 
-COPY --from=build /usr/src/app/dist/frontend /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /usr/src/app/dist/frontend/browser /usr/share/nginx/html
 
 EXPOSE 80
 

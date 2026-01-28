@@ -24,8 +24,8 @@ export interface Experience {
 })
 export class ProjectService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:3000/projects';
-    private serverUrl = 'http://localhost:3000';
+    private apiUrl = '/api/projects';
+    private serverUrl = '/api';
 
     getProjects(): Observable<Experience[]> {
         return this.http.get<Experience[]>(this.apiUrl);

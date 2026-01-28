@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    restart: always
+    environment:
+      - PORT=3000
+    expose:
+      - 3000
+    networks:
+      - portfolio-network
+
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
