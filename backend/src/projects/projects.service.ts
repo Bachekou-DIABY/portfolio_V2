@@ -13,7 +13,7 @@ export class ProjectsService {
             type: 'pro',
             featured: true,
             impact: [
-                { label: 'Interactions', value: '130M' },
+                { label: 'Interactions', value: '130m' },
                 { label: 'Users', value: '250k' }
             ],
             technologies: ['Node.js', 'HTML/CSS', 'MongoDB', 'Redis', 'Cloudflare', 'AWS'],

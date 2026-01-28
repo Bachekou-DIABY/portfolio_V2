@@ -1,31 +1,31 @@
 {
     "PROFILE": {
         "TITLE": "Bachekou DIABY",
-        "SUBTITLE": "Fullstack Developer passionate about building scalable ecosystems. With a Master's degree and strong industry experience, I master the full application lifecycle.",
+        "SUBTITLE": "Fullstack Angular / Nest.js Developer with solid expertise in backend architecture design (Node.js / Symfony). With experience on complex SaaS platforms and high-demand systems (130m+ interactions), I prioritize code quality, performance, and scalability. Problem-solving oriented, I bring a cross-functional technical and business vision to every project.",
         "STATS": {
-            "INTERACTIONS": "Ankama Interactions",
-            "USERS": "Total Users"
+            "INTERACTIONS": "130m+ Interactions",
+            "USERS": "250k+ Viewers"
         }
     },
     "FEATURED": {
         "LABEL": "FEATURED PROJECT",
         "TITLE": "Global Impact at Ankama",
-        "DESCRIPTION": "Developing critical infrastructure supporting millions of users. Focused on performance, scalability, and developer experience."
+        "DESCRIPTION": "Designing a real-time architecture supporting 250,000 viewers and 130 million interactions over a critical 3-week period."
     },
     "PROJECTS": {
         "TITLE": "Projects & Experiences",
-        "SUBTITLE": "Explore all my achievements and professional experiences.",
+        "SUBTITLE": "Explore my technical journey through SaaS platforms and critical infrastructure.",
         "ANKAMA": {
-            "TITLE": "Fullstack Developer",
+            "TITLE": "Backend Mission - Twitch / Ankama",
             "PERIOD": "Feb 2025 - Aug 2025",
-            "DESC": "Development of infrastructure and a complete interactive experience for Ankama games.",
-            "LONG_DESC": "At Ankama, I worked on the complete overhaul of the Twitch Extension infrastructure for DOFUS. This involved creating scalable micro-services with NestJS, capable of handling massive traffic spikes during community events. I also developed a dynamic Angular frontend interface allowing players to interact directly with the game from their favorite streams."
+            "DESC": "Development of the 'Feed the Beast' Twitch extension managing massive traffic spikes.",
+            "LONG_DESC": "Developed a real-time architecture using Node.js, Express.js, and MongoDB to manage interactive overlays. Implemented scalability via Redis and PM2 Cluster Mode to support 250,000 unique viewers and over 130 million interactions in 3 weeks."
         },
         "LINKPART": {
-            "TITLE": "Backend Developer (Apprenticeship)",
+            "TITLE": "Fullstack Developer (Apprenticeship)",
             "PERIOD": "Sept 2023 - Sept 2024",
-            "DESC": "Maintenance and evolution of a complex SaaS platform. Performance optimization via micro-services and event-driven architectures (AWS Lambda).",
-            "LONG_DESC": "During my apprenticeship at LinkPart, I contributed to the development of Hub3e, a SaaS training management platform. I specifically worked on transitioning from a monolithic Symfony architecture to hybrid micro-services using AWS Lambda. I also implemented complex CI/CD pipelines to automate testing and deployment across multiple environments."
+            "DESC": "Evolution of a complex SaaS platform (Hub3e). Transition to hybrid micro-services and event-driven architectures.",
+            "LONG_DESC": "During my apprenticeship at LinkPart, I contributed to the evolution of Hub3e, the leading French platform for apprenticeship management. I designed event-driven architectures with AWS Lambda and Node.js to automate data flows. I also led the technical migration of clients to a new major version while optimizing mass data management."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",

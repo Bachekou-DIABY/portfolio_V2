@@ -8,29 +8,29 @@
 }
 
 :root {
-    --bg: #f1f5f9;
-    /* Slate 100 - More weighted off-white */
-    --text-main: #0f172a;
-    /* Slate 900 */
-    --text-dim: #475569;
-    /* Slate 600 - Better contrast on slate 100 */
-    --border: #cbd5e1;
-    /* Slate 300 */
+    --bg: #fafafa;
+    /* Zinc 50 - Silk-like light background */
+    --text-main: #18181b;
+    /* Zinc 900 - Deep gray text */
+    --text-dim: #52525b;
+    /* Zinc 600 - Muted gray text */
+    --border: #e4e4e7;
+    /* Zinc 200 - Soft borders */
 }
 
 :root.dark {
-    --bg: #08090a;
-    /* Even deeper Charcoal */
-    --text-main: #e2e8f0;
-    /* Slate 200 - Softer white */
-    --text-dim: #64748b;
-    /* Slate 500 */
-    --border: #1e293b;
-    /* Slate 800 */
+    --bg: #27272a;
+    /* Zinc 800 - Lighter gray */
+    --text-main: #fafafa;
+    /* Zinc 50 - Very light gray */
+    --text-dim: #d4d4d8;
+    /* Zinc 300 - Softer dim text */
+    --border: #3f3f46;
+    /* Zinc 700 - Slightly lighter border */
 }
 
 body {
     background-color: var(--bg);
     color: var(--text-main);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }

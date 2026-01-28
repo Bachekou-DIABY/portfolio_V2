@@ -1,31 +1,31 @@
 {
     "PROFILE": {
         "TITLE": "Bachekou DIABY",
-        "SUBTITLE": "Développeur Fullstack passionné par le développement d'écosystèmes scalables. Fort d'une expérience en alternance et d'un Master 2, je maîtrise le cycle de vie complet d'une application.",
+        "SUBTITLE": "Développeur Fullstack Angular / Nest.js avec une expertise solide en conception d'architectures backend (Node.js / Symfony). Fort d'une expérience sur des plateformes SaaS complexes et des systèmes à forte sollicitation (130m+ interactions), je privilégie la qualité du code, la performance et la scalabilité des solutions. Orienté résolution de problèmes, j'apporte une vision transverse technique et métier à chaque projet.",
         "STATS": {
-            "INTERACTIONS": "Interactions Ankama",
-            "USERS": "Utilisateurs totaux"
+            "INTERACTIONS": "130M+ Interactions",
+            "USERS": "250k+ Spectateurs"
         }
     },
     "FEATURED": {
         "LABEL": "PROJET PHARE",
         "TITLE": "Impact Global chez Ankama",
-        "DESCRIPTION": "Développement d'infrastructures críticas supportant des millions d'utilisateurs. Focus sur la performance, la scalabilité et l'expérience développeur."
+        "DESCRIPTION": "Conception d'une architecture temps réel supportant 250 000 spectateurs et 130 millions d'interactions sur une période critique de 3 semaines."
     },
     "PROJECTS": {
         "TITLE": "Projets & Expériences",
-        "SUBTITLE": "Explorez l'ensemble de mes réalisations et expériences professionnelles.",
+        "SUBTITLE": "Découvrez mon parcours technique traversant plateformes SaaS et infrastructures critiques.",
         "ANKAMA": {
-            "TITLE": "Développeur Fullstack",
+            "TITLE": "Mission Backend - Twitch / Ankama",
             "PERIOD": "Fév 2025 - Août 2025",
-            "DESC": "Développement d'infrastructures et d'une expérience interactive complète pour les jeux Ankama.",
-            "LONG_DESC": "Chez Ankama, j'ai travaillé sur la refonte complète de l'infrastructure Twitch Extension pour DOFUS. Cela impliquait la création de micro-services scalables sous NestJS, capables de gérer des pics de trafic massifs lors d'événements communautaires. J'ai également développé une interface frontend dynamique en Angular permettant aux joueurs d'interagir directement avec le jeu depuis leurs streams favoris."
+            "DESC": "Développement de l'extension Twitch 'Feed the Beast' gérant des pics de trafic massifs.",
+            "LONG_DESC": "Développement d'une architecture temps réel avec Node.js, Express.js et MongoDB pour gérer des overlays interactifs. Mise en place d’une scalabilité via Redis et PM2 Cluster Mode pour supporter 250 000 spectateurs uniques et plus de 130 millions d’interactions sur 3 semaines."
         },
         "LINKPART": {
-            "TITLE": "Développeur Backend (Alternance)",
+            "TITLE": "Développeur Fullstack (Alternance)",
             "PERIOD": "Sept 2023 - Sept 2024",
-            "DESC": "Maintenance et évolution d'une plateforme SaaS complexe. Optimisation de la performance par micro-services et architectures événementielles (AWS Lambda).",
-            "LONG_DESC": "Pendant mon alternance chez LinkPart, j'ai contribué au développement de Hub3e, une plateforme SaaS de gestion de la formation. J'ai notamment travaillé sur le passage d'une architecture monolithique Symfony vers des micro-services hybrides utilisant AWS Lambda. J'ai également mis en place des pipelines CI/CD complexes pour automatiser les tests et le déploiement sur plusieurs environnements."
+            "DESC": "Évolution d'une plateforme SaaS complexe (Hub3e). Transition vers des micro-services hybrides et architectures événementielles.",
+            "LONG_DESC": "Pendant mon alternance chez LinkPart, j'ai contribué à l'évolution de Hub3e, leader français de la plateforme d’alternance. J'ai conçu des architectures événementielles avec AWS Lambda et Node.js pour automatiser les flux de données. J'ai également piloté la migration technique des clients vers une nouvelle version majeure tout en optimisant la gestion des données en masse."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",
