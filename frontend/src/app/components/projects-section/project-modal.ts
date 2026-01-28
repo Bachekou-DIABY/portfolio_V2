@@ -75,8 +75,8 @@ import { LanguageService } from '../../services/language.service';
           <div class="space-y-12">
             <!-- Header -->
             <div class="space-y-4">
-              <div class="flex flex-wrap items-center gap-3">
-                <span class="px-4 py-1.5 rounded-full bg-text-main text-bg text-[10px] font-bold tracking-widest uppercase flex-shrink-0">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                <span class="w-fit px-4 py-1.5 rounded-full bg-text-main text-bg text-[10px] font-bold tracking-widest uppercase flex-shrink-0">
                   {{ ls.t()('SKILLS.TYPE.' + (project()?.type?.toUpperCase() || '')) }}
                 </span>
                 <span class="text-sm font-bold text-text-dim uppercase tracking-widest">
