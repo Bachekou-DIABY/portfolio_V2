@@ -2,7 +2,7 @@
 
 Bienvenue sur le dépôt de mon portfolio personnel (Version 2). Cette application est un showcase technique complet mettant en avant mes expériences, mes compétences et mes projets phares.
 
-![Portfolio Preview](c:/Users/bacdi/Downloads/Freelance/Portfolio_V2/backend/public/images/ankama/Feed the beast Overview 2025.png)
+![Portfolio Preview](backend/public/images/ankama/Feed%20the%20beast%20Overview%202025.png)
 
 ## Caractéristiques
 
