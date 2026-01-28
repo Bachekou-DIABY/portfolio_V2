@@ -75,11 +75,11 @@ import { LanguageService } from '../../services/language.service';
           <div class="space-y-12">
             <!-- Header -->
             <div class="space-y-4">
-              <div class="grid grid-cols-1 gap-2 sm:flex sm:flex-row sm:items-center sm:gap-3">
-                <span class="w-fit px-3 py-1 rounded-full bg-text-main text-bg text-[9px] sm:text-[10px] font-bold tracking-widest uppercase flex-shrink-0">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <span class="w-fit px-3 py-1 rounded-full bg-text-main text-bg text-[10px] font-bold tracking-widest uppercase flex-shrink-0">
                   {{ ls.t()('SKILLS.TYPE.' + (project()?.type?.toUpperCase() || '')) }}
                 </span>
-                <span class="text-[10px] sm:text-sm font-bold text-text-dim uppercase tracking-widest leading-none">
+                <span class="text-[11px] sm:text-sm font-bold text-text-dim uppercase tracking-widest">
                   {{ ls.t()(project()?.period || '') }}
                 </span>
               </div>

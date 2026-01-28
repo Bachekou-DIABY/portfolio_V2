@@ -6,10 +6,10 @@ import { LanguageService } from '../../services/language.service';
 import { ModalService } from '../../services/modal.service';
 
 @Component({
-    selector: 'app-project-card',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'app-project-card',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     <div [class.lg:flex-row]="project.featured"
          [class.border-text-main]="project.featured"
          class="group relative bg-bg border border-border rounded-4xl overflow-hidden transition-all hover:border-text-dim hover:shadow-2xl flex flex-col h-full">
@@ -63,14 +63,14 @@ import { ModalService } from '../../services/modal.service';
           </div>
         </ng-template>
         
-        <!-- Badge Overlay Period (Top Right) -->
-        <div class="absolute top-6 right-6 px-4 py-2 rounded-full bg-bg/80 backdrop-blur-md border border-border text-[10px] font-bold tracking-widest text-text-dim uppercase">
+        <!-- Badge Overlay Period (Desktop Only) -->
+        <div class="hidden sm:block absolute top-6 right-6 px-4 py-2 rounded-full bg-bg/80 backdrop-blur-md border border-border text-[10px] font-bold tracking-widest text-text-dim uppercase z-10">
           {{ ls.t()(project.period) }}
         </div>
 
         <!-- Project Type Badge (Top Left) -->
         <div *ngIf="project.type" 
-             class="absolute top-6 left-6 px-4 py-2 rounded-full bg-text-main text-bg text-[10px] font-bold tracking-widest uppercase shadow-lg">
+             class="absolute top-4 left-4 sm:top-6 sm:left-6 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-text-main text-bg text-[9px] sm:text-[10px] font-bold tracking-widest uppercase shadow-lg z-10">
           {{ ls.t()('SKILLS.TYPE.' + project.type.toUpperCase()) }}
         </div>
       </div>
@@ -79,6 +79,10 @@ import { ModalService } from '../../services/modal.service';
       <div class="p-8 lg:p-10 space-y-6 flex-1 flex flex-col justify-center">
         <div class="flex-1 space-y-4">
           <div class="space-y-2">
+            <!-- Period shown on mobile content area -->
+            <p class="sm:hidden text-[10px] font-bold text-text-main/60 uppercase tracking-[0.2em] mb-3">
+              {{ ls.t()(project.period) }}
+            </p>
             <p class="text-sm font-bold text-text-dim uppercase tracking-widest">
               {{ ls.t()(project.company) }}
             </p>
@@ -114,7 +118,7 @@ import { ModalService } from '../../services/modal.service';
         </div>
       </div>
   `,
-    styles: [`
+  styles: [`
     :host {
       display: block;
       height: 100%;
@@ -122,29 +126,29 @@ import { ModalService } from '../../services/modal.service';
   `]
 })
 export class ProjectCardComponent {
-    @Input({ required: true }) project!: Experience;
+  @Input({ required: true }) project!: Experience;
 
-    ls = inject(LanguageService);
-    modalService = inject(ModalService);
-    projectService = inject(ProjectService);
+  ls = inject(LanguageService);
+  modalService = inject(ModalService);
+  projectService = inject(ProjectService);
 
-    currentIndex = signal(0);
+  currentIndex = signal(0);
 
-    next(event: Event) {
-        event.stopPropagation();
-        if (this.project.images?.length) {
-            this.currentIndex.set((this.currentIndex() + 1) % this.project.images.length);
-        }
+  next(event: Event) {
+    event.stopPropagation();
+    if (this.project.images?.length) {
+      this.currentIndex.set((this.currentIndex() + 1) % this.project.images.length);
     }
+  }
 
-    prev(event: Event) {
-        event.stopPropagation();
-        if (this.project.images?.length) {
-            this.currentIndex.set((this.currentIndex() - 1 + this.project.images.length) % this.project.images.length);
-        }
+  prev(event: Event) {
+    event.stopPropagation();
+    if (this.project.images?.length) {
+      this.currentIndex.set((this.currentIndex() - 1 + this.project.images.length) % this.project.images.length);
     }
+  }
 
-    openModal() {
-        this.modalService.open(this.project);
-    }
+  openModal() {
+    this.modalService.open(this.project);
+  }
 }
