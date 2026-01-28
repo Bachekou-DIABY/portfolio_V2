@@ -25,7 +25,7 @@
             "TITLE": "Fullstack Developer (Apprenticeship)",
             "PERIOD": "Sept 2023 - Sept 2024",
             "DESC": "Evolution of a complex SaaS platform (Hub3e). Transition to hybrid micro-services and event-driven architectures.",
-            "LONG_DESC": "<b>CONTEXT</b>: Modernize and automate data flows for the Hub3e SaaS platform, the French leader in apprenticeship management.\n\n<b>SOLUTION</b>: Design of event-driven architectures using AWS Lambda and Node.js to unlock bottlenecks in the Symfony monolith.\n\n<b>RESULT</b>: Complete automation of data synchronizations and successful technical migration of clients to a new major version."
+            "LONG_DESC": "<b>CONTEXT</b>: Evolving <b>Hub3e</b>, France's #1 apprenticeship platform connecting candidates, companies, and over 200 training centers.\n\n<b>SOLUTION</b>: Design of event-driven architectures using AWS Lambda and Node.js to automate data flows and optimize mass record management.\n\n<b>RESULT</b>: Real-time system synchronization and successful lead on the technical migration of clients to a new major version of the application."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",

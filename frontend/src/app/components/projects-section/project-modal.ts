@@ -31,7 +31,7 @@ import { LanguageService } from '../../services/language.service';
                    [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'">
                 <img *ngFor="let img of project()?.images" 
                      [src]="projectService.getImageUrl(img)" 
-                     class="min-w-full h-full object-contain">
+                     class="min-w-full h-full object-contain p-4 lg:p-12 rounded-[60px] drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
               </div>
             </div>
 

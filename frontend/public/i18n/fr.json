@@ -25,7 +25,7 @@
             "TITLE": "Développeur Fullstack (Alternance)",
             "PERIOD": "Sept 2023 - Sept 2024",
             "DESC": "Évolution d'une plateforme SaaS complexe (Hub3e). Transition vers des micro-services hybrides et architectures événementielles.",
-            "LONG_DESC": "<b>CONTEXTE</b> : Moderniser et automatiser les flux de données de la plateforme SaaS Hub3e, leader français de la gestion d'alternance.\n\n<b>SOLUTION</b> : Conception d'architectures événementielles (Event-Driven) utilisant AWS Lambda et Node.js pour débloquer les goulots d'étranglement du monolithe Symfony.\n\n<b>RÉSULTAT</b> : Automatisation complète des synchronisations de données et pilotage réussi de la migration technique des clients vers une nouvelle version majeure."
+            "LONG_DESC": "<b>CONTEXTE</b> : Faire évoluer <b>Hub3e</b>, la plateforme n°1 de l'alternance en France connectant candidats, entreprises et plus de 200 centres de formation.\n\n<b>SOLUTION</b> : Conception d'architectures événementielles via AWS Lambda et Node.js pour automatiser les flux de données et optimiser la gestion des dossiers en masse.\n\n<b>RÉSULTAT</b> : Synchronisation du système en temps réel et pilotage réussi de la migration des clients vers une nouvelle version majeure de l'application."
         },
         "URSSAF": {
             "TITLE": "Symfony URSSAF API",

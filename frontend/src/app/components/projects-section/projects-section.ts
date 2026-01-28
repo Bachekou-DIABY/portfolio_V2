@@ -11,7 +11,7 @@ import { ProjectCardComponent } from './project-card';
   template: `
     <section class="py-24 bg-bg text-text-main px-8 transition-colors duration-300">
       <div class="max-w-[1440px] mx-auto">
-        <header class="mb-16">
+        <header class="mb-16 animate-reveal opacity-0">
           <h2 class="text-4xl font-black tracking-tight mb-4">
             {{ ls.t()('PROJECTS.TITLE') }}
           </h2>
@@ -20,7 +20,7 @@ import { ProjectCardComponent } from './project-card';
           </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-reveal opacity-0 animation-delay-200">
           <app-project-card 
             *ngFor="let project of projects()" 
             [project]="project"
