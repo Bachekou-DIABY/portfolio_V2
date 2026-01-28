@@ -83,6 +83,11 @@
         "IMPACT": "Impact & Figures",
         "CLOSE": "Close details"
     },
+    "LAB": {
+        "TITLE": "The Lab",
+        "SUBTITLE": "A collection of academic and personal projects that have marked my journey.",
+        "VIEW": "Details"
+    },
     "COMMON": {
         "LANGUAGE": "English",
         "SWITCH_TO": "Passer en Français"

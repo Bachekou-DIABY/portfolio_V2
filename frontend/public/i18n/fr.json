@@ -83,6 +83,11 @@
         "IMPACT": "Impact & Chiffres",
         "CLOSE": "Fermer les détails"
     },
+    "LAB": {
+        "TITLE": "Le Lab",
+        "SUBTITLE": "Une collection de projets académiques et personnels qui ont jalonné mon parcours.",
+        "VIEW": "Détails"
+    },
     "COMMON": {
         "LANGUAGE": "Français",
         "SWITCH_TO": "Switch to English"

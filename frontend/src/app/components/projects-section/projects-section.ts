@@ -40,7 +40,7 @@ export class ProjectsSectionComponent implements OnInit {
 
   ngOnInit() {
     this.projectService.getProjects().subscribe(projects => {
-      this.projects.set(projects);
+      this.projects.set(projects.filter(p => p.featured));
     });
   }
 }

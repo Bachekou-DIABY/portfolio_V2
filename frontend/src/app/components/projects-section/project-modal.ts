@@ -185,7 +185,7 @@ export class ProjectModalComponent {
       'Redis': { bg: 'rgba(220, 53, 34, 0.1)', text: '#dc3522', border: 'rgba(220, 53, 34, 0.2)' },
       'Cloudflare': { bg: 'rgba(246, 133, 27, 0.1)', text: '#f6851b', border: 'rgba(246, 133, 27, 0.2)' },
       'Flutter': { bg: 'rgba(2, 125, 247, 0.1)', text: '#027df7', border: 'rgba(2, 125, 247, 0.2)' },
-      'JavaScript': { bg: 'rgba(247, 223, 30, 0.1)', text: '#f7df1e', border: 'rgba(247, 223, 30, 0.2)' }
+      'JavaScript': { bg: 'rgba(247, 223, 30, 0.1)', text: '#b59a00', border: 'rgba(247, 223, 30, 0.2)' }
     };
 
     const config = colors[tech] || { bg: 'rgba(var(--text-dim-rgb), 0.05)', text: 'var(--text-dim)', border: 'var(--border)' };

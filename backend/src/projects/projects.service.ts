@@ -38,9 +38,7 @@ export class ProjectsService {
             technologies: ['Angular', 'TypeScript', 'Symfony', 'PHP', 'Node.js', 'AWS Lambda', 'MySQL'],
             longDescription: 'PROJECTS.LINKPART.LONG_DESC',
             images: ['/images/linkpart/Hub3e login.png'],
-        }
-        /*
-        ,
+        },
         {
             id: 'urssaf',
             title: 'PROJECTS.URSSAF.TITLE',
@@ -48,6 +46,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.URSSAF.DESC',
             type: 'academic',
+            featured: false,
             technologies: ['Symfony', 'PHP'],
             images: ['/images/urssaf/symfonyAPIProject.png'],
         },
@@ -58,6 +57,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.CHEFCOOK.DESC',
             type: 'academic',
+            featured: false,
             technologies: ['Flutter'],
             images: [
                 '/images/chefCook/chefCook1.png',
@@ -72,6 +72,7 @@ export class ProjectsService {
             period: '2024',
             description: 'PROJECTS.V1.DESC',
             type: 'personal',
+            featured: false,
             technologies: ['Angular', 'TypeScript'],
             images: ['/images/portfolioV1/image.png'],
         },
@@ -82,6 +83,7 @@ export class ProjectsService {
             period: '2020',
             description: 'PROJECTS.ENERGYMIX.DESC',
             type: 'academic',
+            featured: false,
             technologies: ['Node.js', 'JavaScript'],
             images: [
                 '/images/energyMix/energyMixProject1.png',
@@ -96,10 +98,10 @@ export class ProjectsService {
             period: '2020',
             description: 'PROJECTS.DICEGAME.DESC',
             type: 'academic',
+            featured: false,
             technologies: ['JavaScript'],
             images: ['/images/diceGame/jsGameProject.png'],
         }
-        */
     ];
 
     findAll(): Experience[] {

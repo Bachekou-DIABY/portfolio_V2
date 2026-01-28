@@ -8,6 +8,7 @@ import { ProjectsSectionComponent } from './components/projects-section/projects
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle';
 import { ContactSectionComponent } from './components/contact-section/contact-section';
 import { ProjectModalComponent } from './components/projects-section/project-modal';
+import { LabSectionComponent } from './components/projects-section/lab-section';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { ProjectModalComponent } from './components/projects-section/project-mod
     SkillsSectionComponent,
     ThemeToggleComponent,
     ProjectsSectionComponent,
+    LabSectionComponent,
     ProjectModalComponent,
     ContactSectionComponent
   ],
