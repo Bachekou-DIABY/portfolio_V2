@@ -41,11 +41,11 @@ export class SkillsSectionComponent {
     },
     {
       id: 'BACKEND',
-      skills: ['NestJS', 'Node.js', 'Symfony', 'MongoDB', 'PostgreSQL', 'Express']
+      skills: ['NestJS', 'Node.Js', 'Express.Js', 'Symfony', 'MongoDB', 'PostgreSQL']
     },
     {
       id: 'DEVOPS',
-      skills: ['Docker', 'AWS', 'Git / Github', 'Gitlab', 'CI/CD']
+      skills: ['Docker', 'AWS', 'Git / Github', 'Gitlab', 'CI/CD', 'Cloudflare', 'Redis', 'Jest', 'Swagger']
     }
   ]);
 }
