@@ -4,7 +4,7 @@
 
 Bienvenue sur le dépôt de mon portfolio personnel (Version 2). Cette application est un showcase technique complet mettant en avant mes expériences, mes compétences et mes projets phares.
 
-![Portfolio Preview](backend/public/images/ankama/Feed%20the%20beast%20Overview%202025.png)
+![Portfolio Preview](backend/public/images/preview.png)
 
 ## Caractéristiques
 - **Design Premium** : UI/UX moderne avec animations fluides (GSAP-like via CSS), typographie soignée (Inter & Outfit) et mode sombre optimisé.
